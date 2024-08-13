@@ -11,43 +11,54 @@
             color: #333;
             margin: 0;
             padding: 0;
+            background-color: #fff; /* White background for the entire page */
         }
-        .header {
-            text-align: center;
-            margin-top: 20px;
+        .header-image {
+            position: fixed; /* Keep the image fixed at the top */
+            top: 0;
+            left: 50%; /* Center the image */
+            transform: translateX(-50%); /* Shift left by half its width */
+            width: 1161px; /* Set the image width */
+            height: 43px; /* Set the image height */
+            z-index: 1000; /* Ensure the image is above other content */
         }
-        .section-label {
-            text-transform: uppercase;
-            font-size: 14px;
-            letter-spacing: 0.1em;
-            margin-bottom: 10px;
-            color: #000;
-        }
-        .nyt-logo {
-            font-size: 24px;
-            font-family: 'Times New Roman', Times, serif;
-            font-weight: bold;
-            margin-bottom: 20px;
+        hr {
+            width: 100%; /* Full width of the viewport */
+            border: none; /* Remove default border */
+            border-top: 1px solid #333; /* Add a solid line */
+            margin: 0; /* Remove margins */
+            position: fixed; /* Keep the line fixed below the header */
+            top: 43px; /* Align with the bottom of the header image */
+            left: 0; /* Align to the left edge of the viewport */
         }
         .container {
             max-width: 800px;
             margin: 20px auto;
             padding: 20px;
+            margin-top: 70px; /* Space for fixed header image */
         }
         .headline {
-            font-size: 36px;
-            font-weight: bold;
+            font-size: 36px; /* Headline font size */
+            font-weight: bold; /* Bold headline */
+            font-style: italic; /* Italicized headline */
             line-height: 1.2;
+            margin: 15px 0;
+        }
+        .description {
+            font-size: 24px; /* Description font size */
+            color: #666; /* Lighter shade of black for the description */
+            margin-bottom: 10px; /* Space below the description */
         }
         .byline {
-            margin-top: 10px;
+            margin-top: 5px;
             font-style: italic;
-            color: #666;
+            color: #555; /* Darker color for better contrast */
+            font-size: 18px; /* Byline font size */
         }
         .date {
             margin-top: 5px;
-            font-size: 14px;
-            color: #999;
+            font-size: 16px; /* Date font size */
+            color: #777; /* Darker color for visibility */
         }
         .main-image {
             width: 100%;
@@ -65,21 +76,20 @@
             margin-top: 20px;
         }
         .footer {
-            border-top: 1px solid #ccc;
             margin-top: 40px;
             padding-top: 20px;
             font-size: 14px;
             color: #999;
+            text-align: center; /* Center the footer text */
         }
     </style>
 </head>
 <body>
-    <div class="header">
-        <div class="section-label">SCIENCE</div>
-        <div class="nyt-logo">The New York Times</div>
-    </div>
+    <img src="https://files.catbox.moe/qsvspy.png" alt="New York Times Header" class="header-image">
+    <hr>
     <div class="container">
         <h1 class="headline">Betelgeuse's Supernova Shocks the World</h1>
+        <div class="description">Astrophysicists discover famous star, Betelgeuse, has finally exploded and gone into a beautiful stage known as a supernova.</div>
         <div class="byline">By Katrina Miller</div>
         <div class="date">Published August 12, 2024</div>
 
